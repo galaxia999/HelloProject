@@ -19,6 +19,8 @@ int main() {
     cudaError_t cudaResultCode = cudaGetDeviceCount(&deviceCount);
     if (cudaResultCode != cudaSuccess) 
 	deviceCount = 0;
+	
+	/* 주석추가 */
     /* machines with no GPUs can still report one emulation device */
 //fprintf(stderr,"deviceCount = %d\n",deviceCount);
     for (device = 0; device < deviceCount; ++device) {
